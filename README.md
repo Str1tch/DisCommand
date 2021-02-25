@@ -1,5 +1,5 @@
 ## DisCommand library guide
-The second version of the DiscordiaCommands library, this version is written using the 'class' library, which is more intelligent than the previous implementation. Also, in this version, the methods received more correct names for your comfort.
+**The second version of the DiscordiaCommands** library, *this version is written using the 'class' library*, which is more intelligent than the previous implementation. Also, in this version, the *methods received more correct names* for your comfort.
 ## How to install?
 Download and move file to `YourBotFolder/libs`
 ## How to use?
