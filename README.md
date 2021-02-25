@@ -1,6 +1,5 @@
 ## DisCommand library guide
-> Library writed for simple creating command in your lua bots writed on discordia. 
-> Script requires installed Discordia
+> The second version of the DiscordiaCommands library, this version is written using the 'class' library, which is more intelligent than the previous implementation. Also, in this version, the methods received more correct names for your comfort.
 ## How to install?
 > Download and move file to `YourBotFolder/libs`
 ## How to use?
