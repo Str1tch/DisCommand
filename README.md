@@ -6,7 +6,7 @@
 ## How to use?
 ```lua 
 local discordia = require("discordia")
-local dCommands = require("discommand")
+local dCommands = require("dis-command")
 
 local client = discordia.Client()
 
