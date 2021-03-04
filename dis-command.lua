@@ -3,7 +3,7 @@ local class = discordia.class
 discordia.extensions.string()
 
 -- > Creating class base
-local Command = class("Command")
+local Command = class("CommandClass")
 
 function Command:__init(name)
 	if name then
@@ -52,9 +52,9 @@ local function newListener(client)
 	if client then
 		client:on("messageCreate", function(message)
 			if message.author.bot then return end
+			if not message.guild then return end
 			local messageSplit = string.split(message.content, " ")
 			local commandObject = commandTable[messageSplit[1]]
-			local commandCallback = commandObject:GetCallback()
 			if commandObject then
 				local isaccess = false
 				local permissions = commandObject:GetPermissions()
@@ -69,14 +69,11 @@ local function newListener(client)
 				end
 				if isaccess then
 					coroutine.wrap(function()
-						local suc, err = pcall(commandCallback, message, messageSplit)
-						if not suc then
-							error(err)
-						end
+						local suc, err = pcall(commandObject:GetCallback(), message, messageSplit)
 					end)()
 				end
+				message:delete()
 			end
-			message:delete()
 		end)
 	end
 end
