@@ -1,3 +1,5 @@
+-- Discordia Command Manager
+-- Stretch#0421
 local discordia = require "discordia"
 local class = discordia.class
 discordia.extensions.string()
